@@ -3,22 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sports Poller Widget Demo</title>
+  <title>Sports Poller Widgets Demo</title>
   <style>
     .embed-wrap {
       position: relative;
       width: 100%;
       max-width: 1200px;
+      min-height: 600px; /* ensure enough height for widget */
       margin: 2rem auto;
-      aspect-ratio: 16 / 9;  /* modern browsers */
       background: #f6f7f9;
       border-radius: 12px;
-      overflow: hidden;
+      overflow: visible; /* allow full widget display */
       box-shadow: 0 6px 24px rgba(0,0,0,0.08);
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
+    .widget-spacing {
+      margin-top: 3rem;
+    }
+
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
       color: #1f2937;
@@ -29,15 +34,23 @@
 </head>
 <body>
   <header>
-    <h1>Sports Poller Widget</h1>
-    <p>Embedded below with 1World Online script.</p>
+    <h1>Sports Poller Widgets</h1>
+    <p>Two 1World Online pollers embedded below.</p>
   </header>
 
   <main>
+    <!-- First Widget -->
     <div class="embed-wrap">
-      <!-- 1World Online Poller Embed -->
       <div id="widgetOWO"
            data-owo-code="7695dd0c-f87b-4d12-979f-e7f3d95f33d9"
+           data-owo-mode="poller">
+      </div>
+    </div>
+
+    <!-- Second Widget with spacing -->
+    <div class="embed-wrap widget-spacing">
+      <div id="widgetOWO"
+           data-owo-code="cdf523af-d7a9-4706-938e-f841002653c0"
            data-owo-mode="poller">
       </div>
     </div>
