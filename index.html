@@ -3,56 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sports Poller Widgets Demo</title>
+  <title>Sports Widgets Demo</title>
   <style>
     .embed-wrap {
       position: relative;
       width: 100%;
       max-width: 1200px;
-      min-height: 600px; /* ensure enough height for widget */
+      min-height: 600px; /* enough space for widget */
       margin: 2rem auto;
       background: #f6f7f9;
       border-radius: 12px;
-      overflow: visible; /* allow full widget display */
+      overflow: visible;
       box-shadow: 0 6px 24px rgba(0,0,0,0.08);
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
-    .widget-spacing {
-      margin-top: 3rem;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color: #1f2937;
-      padding: 1rem;
-    }
+    .widget-spacing { margin-top: 3rem; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #1f2937; padding: 1rem; }
     header, footer { text-align: center; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sports Poller Widgets</h1>
-    <p>Two 1World Online pollers embedded below.</p>
+    <h1>Sports Widgets Demo</h1>
+    <p>Two pollers and a sports quiz embedded below.</p>
   </header>
 
   <main>
-    <!-- First Widget -->
+    <!-- Poller Widget 1 -->
     <div class="embed-wrap">
-      <div id="widgetOWO"
-           data-owo-code="7695dd0c-f87b-4d12-979f-e7f3d95f33d9"
-           data-owo-mode="poller">
-      </div>
+      <div id="widgetPoller1" data-owo-code="7695dd0c-f87b-4d12-979f-e7f3d95f33d9" data-owo-mode="poller"></div>
     </div>
 
-    <!-- Second Widget with spacing -->
+    <!-- Poller Widget 2 -->
     <div class="embed-wrap widget-spacing">
-      <div id="widgetOWO"
-           data-owo-code="cdf523af-d7a9-4706-938e-f841002653c0"
-           data-owo-mode="poller">
-      </div>
+      <div id="widgetPoller2" data-owo-code="cdf523af-d7a9-4706-938e-f841002653c0" data-owo-mode="poller"></div>
+    </div>
+
+    <!-- Knowledge Quiz Widget -->
+    <div class="embed-wrap widget-spacing">
+      <div id="widgetQuiz" data-owo-type="widget" data-owo-code="a22b54b2-0ef9-4ccc-9034-ceb60071979a" data-owo-mode="survey-knowledge-quiz"></div>
     </div>
   </main>
 
@@ -60,7 +51,8 @@
     <small>© 2025 Your Company</small>
   </footer>
 
-  <!-- 1World Online Script -->
+  <!-- Scripts: one per widget type -->
   <script src="https://widget-frontend-wleu.1worldonline.com/constructor/index.js?ncu={{CLICK_URL_ESC}}" async></script>
+  <script src="//frontend-wleu.1worldonline.com/poller-constructor.js?ncu={{CLICK_URL_ESC}}" type="text/javascript" async></script>
 </body>
 </html>
